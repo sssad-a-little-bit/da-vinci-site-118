@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --color-graphite: #1a1a1a;
+  --color-warm-black: #0f0f0f;
+  --color-cream: #f5f0e8;
+  --color-milk: #faf8f5;
+  --color-beige: #e8dfd0;
+  --color-gold: #b8a07a;
+  --color-gold-muted: #9a8560;
+  --color-wood: #3d2e1f;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-text-on-dark: #f5f0e8;
+}
+
+@theme inline {
+  --color-background: var(--color-milk);
+  --color-foreground: var(--color-text);
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+  --color-graphite: #1a1a1a;
+  --color-warm-black: #0f0f0f;
+  --color-cream: #f5f0e8;
+  --color-milk: #faf8f5;
+  --color-beige: #e8dfd0;
+  --color-gold: #b8a07a;
+  --color-gold-muted: #9a8560;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-milk);
+  color: var(--color-text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-warm-black);
+}
+
+/* Utility classes */
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
